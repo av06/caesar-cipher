@@ -19,17 +19,16 @@ pipeline {
             steps {
                 sh 'sudo apt-get update'
                 sh 'sudo apt install virtualenv'
-                sh 'virtualenv venv'
+                sh 'python3 -m virtualenv venv'
                 sh 'source venv/bin/activate'
+                sh 'pip3 install -r requirements.txt'
+                sh 'pylint --const-rgx='[a-z_][a-z0-9_]{2,30}$' sample.py'
             }
 
         }
 
         stage('Test') {
             steps {
-                sh 'pip3 install pylint'
-                sh 'pip3 install unittest'
-                sh 'pylint --const-rgx='[a-z_][a-z0-9_]{2,30}$' sample.py'
                 sh 'python3 -m unittest test1.py'
 
             }
