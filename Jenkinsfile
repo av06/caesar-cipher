@@ -22,7 +22,7 @@ pipeline {
                 sh 'python3 -m virtualenv venv'
                 sh 'source venv/bin/activate'
                 sh 'pip3 install -r requirements.txt'
-                sh 'pylint --const-rgx='[a-z_][a-z0-9_]{2,30}$' sample.py'
+                sh 'pylint sample.py'
             }
 
         }
