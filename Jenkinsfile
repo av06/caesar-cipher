@@ -1,20 +1,17 @@
 Jenkinsfile
 pipeline {
-    agent {label 'akhil'}
-
+    agent any
     stages {
         stage('CleanWorkspace') {
             steps {
                 cleanWs()
             }
         }
-
         stage('CheckOutSCM') {
             steps {
                 checkout scm
             }
         }
-
         stage('Build') {
             steps {
                 sh 'sudo apt-get update'
@@ -26,13 +23,11 @@ pipeline {
             }
 
         }
-
         stage('Test') {
             steps {
                 sh 'python3 -m unittest test1.py'
 
             }
         }
-
     }
 }
