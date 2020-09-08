@@ -1,6 +1,6 @@
 Jenkinsfile
 pipeline {
-    agent any
+    agent {label 'akhil'}
 
     stages {
         stage('CleanWorkspace') {
@@ -21,7 +21,7 @@ pipeline {
                 sh 'sudo apt install virtualenv'
                 sh 'python3 -m virtualenv venv'
                 sh 'source venv/bin/activate'
-                sh 'pip3 install -r requirements.txt'
+                sh 'sudo pip3 install -r requirements.txt'
                 sh 'pylint sample.py'
             }
 
