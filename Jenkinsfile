@@ -38,12 +38,12 @@ pipeline {
 		}
 	    }
 	    steps {
-		withEnv(["HOME=${env.WORKSPACE}"]) {
+		//withEnv(["HOME=${env.WORKSPACE}"]) {
 		    echo '#####-Beginnig Test-#####'
 		    sh 'pylint sample.py'   // Checking the code quality by linting
 		    sh 'python3 -m unittest test1.py'   // Testing the Functions
 		    echo '#####-Test Complete-#####'
-		}
+		//}
 	    }
 	    // post {
 	    //     // always {
