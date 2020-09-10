@@ -5,8 +5,10 @@ using a classic Caesar shift substitution (3 letter shift)"""
 import string
 
 shift = 3 #to store Caesar shift value
-choice = input("would you like to encode or decode?\n") #checks the choice of user
-word = input("Please enter text\n") #input text from user to encode/decode
+#choice = input("would you like to encode or decode?\n") #checks the choice of user
+choice = 'encode'
+#word = input("Please enter text\n") #input text from user to encode/decode
+word = 'Akhil'
 if type(word) not in [str]:
     raise TypeError("The entered word should be a valid string!")
 #raises exception if the entered word is not a string
