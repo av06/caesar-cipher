@@ -44,12 +44,7 @@ pipeline {
 		    sh 'python3 -m unittest test1.py'   // Testing the Functions
 		    echo '#####-Test Complete-#####'
 		}
-	    }
-	    // post {
-	    //     // always {
-	    //     //     junit 'test-reports/*.xml'
-	    //     // }
-	    // }    
+		}
 	}
     }
 }
