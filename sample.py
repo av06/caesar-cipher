@@ -9,7 +9,7 @@ shift = 3 #to store Caesar shift value
 choice = 'encode'
 #word = input("Please enter text\n") #input text from user to encode/decode
 word = 'Akhil'
-if isinstance(word, str) == False
+if isinstance(word, str) == False:
     raise TypeError("The entered word should be a valid string!")
 #raises exception if the entered word is not a string
 
