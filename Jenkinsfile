@@ -32,11 +32,11 @@ pipeline {
 	    }
 	}
 	stage('test') {
-	    when{
+	    '''when{
 		expression {
 		    params.Proceed_Permission == 'Proceed'
 		}
-	    }
+	    }'''
 	    steps {
 		withEnv(["HOME=${env.WORKSPACE}"]) {
 		    echo '#####-Beginnig Test-#####'
