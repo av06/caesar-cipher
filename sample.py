@@ -30,4 +30,4 @@ if choice == "decode": #decoding logic
             x = letters.index(letter) - shift
             encoded = encoded + letters[x]
 
-print encoded #prints the encoded/decoded output
+print(encoded) #prints the encoded/decoded output
