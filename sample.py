@@ -31,3 +31,6 @@ if choice == "decode": #decoding logic
             encoded = encoded + letters[x]
 
 print(encoded) #prints the encoded/decoded output
+
+if __name__ == '__main__':
+    pass
