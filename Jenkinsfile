@@ -1,12 +1,12 @@
 pipeline {
     agent any
-    parameters {
+    /*parameters {
 	choice (
 		name: 'Proceed_Permission',
 		choices: ['Proceed' , 'Stop'],
 		description: ''
 		)
-	}
+	}*/
     stages {
 	stage('Clean WS'){
 	    steps {
